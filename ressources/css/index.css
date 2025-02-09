@@ -1,0 +1,105 @@
+button:hover{
+    cursor: pointer;
+}
+
+#index-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.course-list-container{
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/*cards styling*/
+.course-card{
+    border: 2px solid rgb(176, 174, 174, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 500px;
+    width: 400px;
+    margin: 0 0 30px 0;
+    position: relative;
+}
+
+.course-card-img{
+    height: 50%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.course-card-img:hover img{
+    filter: brightness(0.4);
+    transform: scale(1.3);
+    transition: 0.4s;
+}
+
+.course-card-img img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: 0.4s;
+    transform: scale(1.5);
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    z-index: 2;
+    font-weight: bolder;
+    font-size: 40px;
+    display: none;
+    transition: 0.4s;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.9);
+}
+
+.overlay-tag{
+    font-size: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+.course-card-img:hover .overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.course-card-text{
+    color: rgb(176, 174, 174);
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    height: 80px;
+}
+
+.course-card-actionbtn{
+    position: relative;
+    top: 30px;
+    text-align: center;
+}
+
+.course-card-actionbtn button{
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid;
+    border-radius: 15px;
+
+}

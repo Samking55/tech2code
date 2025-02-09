@@ -1,0 +1,392 @@
+/*import font*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(38, 38, 51);
+    font-family: "Lato";
+    color: white;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/*query tablet*/
+@media (min-width: 800px){
+    /*header style*/
+    header {
+        position: relative;
+        top: 0;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        border: 1px solid;
+    }
+
+    .site-name {
+        font-weight: bold;
+        width: 25%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid red;
+    }
+
+    .site-name p{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border: 1px solid;
+        font-size: 30px;
+    }
+
+    /*menu section*/
+    #main_nav {
+        position: relative;
+        width: 90%;
+        top: 0;
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 30px;
+    }
+
+    /*menu section*/
+    .menu {
+        display: block;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        padding: 0%;
+        list-style-type: none;
+        width: 100%;
+    }
+
+    .menu-item {
+        position: relative;
+        left: 10%;
+        display: inline-block;
+        height: 100%;
+        width: 17%;
+        border: 1px solid;
+        margin: 0 0px 0 10px;
+        padding: 0;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .menu-item:last-child{
+        width: 150px;
+    }
+
+    .menu-item p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        text-align: center;
+    }
+
+    .menu-item:hover {
+        cursor: pointer;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        display: none;
+        transition: 0.3s;
+        z-index: 2;
+        width: 200%;
+        padding: 0;
+        list-style-type: none;
+        text-align: center;
+        border-radius: 0 0 20px 0;
+        background-color: rgb(38, 38, 51);
+        box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
+    }
+
+    .dropdown-item {
+        margin: 10px 0 10px 0;
+        display: block;
+        width: 100%;
+        height: 30px;
+    }
+
+    .dropdown-item:hover {
+        transform: scale(1.1);
+    }
+
+    li[data-item-menu="list_course_item"]:hover .dropdown-menu {
+        display: block;
+        transition: 0.3s;
+    }
+
+    .active {
+        border-bottom: 1px solid red;
+    }
+
+    #user-section {
+        margin: 0 0 0 50px;
+        width: 15%;
+        position: relative;
+        text-align: center;
+    }
+
+    .profile-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        background-color: transparent;
+        color: white;
+        border-radius: 50%;
+        border: 1px solid;
+    }
+
+    .profile-btn:hover {
+        cursor: pointer;
+    }
+
+    #profile-section-container {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        border: 1px solid;
+        margin: 10px 0 0 0;
+        transition: 0.3s;
+        ;
+
+    }
+
+    .profile-info-container {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .profile-info-container li {
+        display: block;
+        height: 30px;
+        width: 100%;
+        margin: 10px 0 0 0;
+        border-bottom: 1px solid;
+    }
+
+    .profile-info-container li:last-child {
+        border: none;
+    }
+
+    .profile-info-container li:hover {
+        cursor: pointer;
+        transform: scale(0.9);
+    }
+
+    .profile-login:hover {
+        cursor: pointer;
+    }
+
+    /*hide profile deail container*/
+    .hide {
+        display: none;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    /*style main section*/
+    main {
+        margin: 15px 0 0 0;
+    }
+
+}
+
+/*query tablet end*/
+
+/*query desktop*/
+@media (min-width: 1250px) {
+
+    /*header style*/
+    header {
+        position: relative;
+        top: 0;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+    }
+
+    .site-name {
+        font-size: 35px;
+        font-weight: bold;
+        width: 20%;
+        text-align: center;
+    }
+    .site-name p{
+        font-size: 35px;
+    }
+    /*menu section*/
+    #main_nav {
+        position: relative;
+        width: 60%;
+        top: 0;
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 50px;
+    }
+
+    /*menu section*/
+    .menu {
+        display: block;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        padding: 0%;
+        list-style-type: none;
+    }
+
+    .menu-item {
+        position: relative;
+        left: 50px;
+        display: inline-block;
+        height: 100%;
+        width: 150px;
+        margin: 0 10px 0 10px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu-item p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        text-align: center;
+    }
+
+    .menu-item:hover {
+        cursor: pointer;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        display: none;
+        transition: 0.3s;
+        z-index: 2;
+        width: 100%;
+        padding: 0;
+        list-style-type: none;
+        text-align: center;
+        border-radius: 0 0 20px 0;
+        background-color: rgb(38, 38, 51);
+        box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
+    }
+
+    .dropdown-item {
+        margin: 10px 0 10px 0;
+        display: block;
+        width: 100%;
+        height: 30px;
+    }
+
+    .dropdown-item:hover {
+        transform: scale(1.1);
+    }
+
+    li[data-item-menu="list_course_item"]:hover .dropdown-menu {
+        display: block;
+        transition: 0.3s;
+    }
+
+    .active {
+        border-bottom: 1px solid red;
+    }
+
+    #user-section {
+        margin: 0 0 0 50px;
+        width: 15%;
+        position: relative;
+        text-align: center;
+    }
+
+    .profile-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        background-color: transparent;
+        color: white;
+        border-radius: 50%;
+        border: 1px solid;
+    }
+
+    .profile-btn:hover {
+        cursor: pointer;
+    }
+
+    #profile-section-container {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        border: 1px solid;
+        margin: 10px 0 0 0;
+        transition: 0.3s;
+        ;
+
+    }
+
+    .profile-info-container {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .profile-info-container li {
+        display: block;
+        height: 30px;
+        width: 100%;
+        margin: 10px 0 0 0;
+        border-bottom: 1px solid;
+    }
+
+    .profile-info-container li:last-child {
+        border: none;
+    }
+
+    .profile-info-container li:hover {
+        cursor: pointer;
+        transform: scale(0.9);
+    }
+
+    .profile-login:hover {
+        cursor: pointer;
+    }
+
+    /*hide profile deail container*/
+    .hide {
+        display: none;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    /*style main section*/
+    main {
+        margin: 15px 0 0 0;
+    }
+
+}
+
+/*query desktop end*/
