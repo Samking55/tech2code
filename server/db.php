@@ -1,8 +1,8 @@
 <?php
 $db_hostname = "localhost";
-$db_u_name = "sam";
-$db_pwd = "lucsamuel";
-$db_name = "tech2code";
+$db_u_name = "root";
+$db_pwd = "";
+$db_name = "db";
 
 try{
     $db_connect = new mysqli($db_hostname, $db_u_name, $db_pwd, $db_name);
