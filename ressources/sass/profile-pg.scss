@@ -1,0 +1,619 @@
+@import "colors";
+
+
+// query phone
+
+@media (max-width: 576px) {
+
+    // profile info section
+    #profile-info {
+        // display user mail and name
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px 0;
+        border: 1px solid rgb(10, 10, 10, 0.1);
+        box-shadow: 1px 1px 2px rgb(10, 10, 10, 0.3);
+        width: 90%;
+        margin: 0 0 25px 0;
+
+        .fa-user {
+            font-size: 35px;
+            color: $primary-color;
+        }
+
+        // user name text
+        .profile-name {
+            font-weight: bold;
+            font-size: large;
+        }
+
+        // profile mail container for  showing user mail
+        .profile-mail {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+            padding: 0 10px;
+            font-size: larger;
+
+            i {
+                margin: 0 10px;
+            }
+        }
+    }
+
+    // profile settings
+    #profile-settings {
+        width: 90%;
+        border: 1px solid rgb(10, 10, 10, 0.1);
+        box-shadow: 1px 1px 2px rgb(10, 10, 10, 0.3);
+
+        // modify-pwd section
+        .modify-pwd {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 97%;
+            }
+
+            form input {
+                border: 1px solid rgb(10, 10, 10, 0.3);
+                height: 37px;
+                border-radius: 4px;
+                padding: 0 5px;
+                width: 90%;
+                margin: 5px 0;
+            }
+
+            form input:focus {
+                outline: none;
+            }
+
+            // save pwd button
+            .save-new-pwd {
+                width: 50%;
+                margin: 10px 0;
+                height: 34px;
+                border: none;
+                border-radius: 5px;
+                background-color: $primary-color;
+                color: $text-color;
+            }
+
+            .save-new-pwd:disabled {
+                background-color: lighten($color: $primary-color, $amount: 9%);
+                color: $text-color;
+            }
+        }
+
+        // dark mode section
+        .dark-mode {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            // switch tracker
+            .switch {
+                width: 70px;
+                height: 32px;
+                position: relative;
+                background-color: $primary-color;
+                display: flex;
+                align-items: center;
+                border-radius: 15px;
+                cursor: pointer;
+            }
+
+            // input check box
+            .switch input {
+                display: none;
+            }
+
+            // slider
+            .slider {
+                position: absolute;
+                height: 28px;
+                width: 28px;
+                border-radius: 50px;
+                background-color: $text-color;
+                -webkit-transition: .3s;
+                transition: .3s;
+            }
+
+        }
+    }
+
+    // utility section
+    #utility {
+        width: 100%;
+
+        p {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    // popup
+    #popup {
+        position: fixed;
+        z-index: 3;
+        width: 95%;
+        bottom: 15px;
+        padding: 15px;
+        animation: bounce-popup 0.5s ease-in;
+        transition: 0.5s ease-in;
+        color: $text-color;
+        min-width: 100px;
+        max-width: 300px;
+        cursor: pointer;
+    }
+
+    // animate popup
+    @keyframes bounce-popup {
+        0% {
+            bottom: 5px;
+        }
+
+        50% {
+            bottom: 30px;
+        }
+
+        100% {
+            bottom: 3px;
+        }
+    }
+
+    // hide popup class
+    .hide-popup {
+        transform: translateY(140%);
+        transition: 0.5s ease-in;
+        opacity: 0;
+        display: none;
+    }
+}
+
+// tablet query
+@media (min-width: 576px) and (max-width: 1200px) {
+
+    // profile info section
+    #profile-info {
+        // display user mail and name
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px 0;
+        border: 1px solid rgb(10, 10, 10, 0.1);
+        box-shadow: 1px 1px 2px rgb(10, 10, 10, 0.3);
+        min-width: 50%;
+        max-width: 70%;
+        margin: 0 0 25px 0;
+
+        .fa-user {
+            font-size: 35px;
+            color: $primary-color;
+        }
+
+        // user name text
+        .profile-name {
+            font-weight: bold;
+            font-size: large;
+        }
+
+        // profile mail container for  showing user mail
+        .profile-mail {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+            padding: 0 10px;
+            font-size: larger;
+
+            i {
+                margin: 0 10px;
+            }
+        }
+    }
+
+    // profile settings
+    #profile-settings {
+        min-width: 50%;
+        max-width: 70%;
+        border: 1px solid rgb(10, 10, 10, 0.1);
+        box-shadow: 1px 1px 2px rgb(10, 10, 10, 0.3);
+
+        // modify-pwd section
+        .modify-pwd {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 97%;
+            }
+
+            form input {
+                border: 1px solid rgb(10, 10, 10, 0.3);
+                height: 37px;
+                border-radius: 4px;
+                padding: 0 5px;
+                width: 90%;
+                margin: 5px 0;
+            }
+
+            form input:focus {
+                outline: none;
+            }
+
+            // save pwd button
+            .save-new-pwd {
+                width: 50%;
+                margin: 10px 0;
+                height: 34px;
+                border: none;
+                border-radius: 5px;
+                background-color: $primary-color;
+                color: $text-color;
+            }
+
+            .save-new-pwd:disabled {
+                background-color: lighten($color: $primary-color, $amount: 9%);
+                color: $text-color;
+            }
+        }
+
+        // dark mode section
+        .dark-mode {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            // switch tracker
+            .switch {
+                width: 70px;
+                height: 32px;
+                position: relative;
+                background-color: $primary-color;
+                display: flex;
+                align-items: center;
+                border-radius: 15px;
+                cursor: pointer;
+            }
+
+            // input check box
+            .switch input {
+                display: none;
+            }
+
+            // slider
+            .slider {
+                position: absolute;
+                height: 28px;
+                width: 28px;
+                border-radius: 50px;
+                background-color: $text-color;
+                -webkit-transition: .3s;
+                transition: .3s;
+            }
+
+        }
+    }
+
+    // utility section
+    #utility {
+        width: 100%;
+
+        p {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    // popup
+    #popup {
+        position: fixed;
+        z-index: 3;
+        bottom: 15px;
+        padding: 15px;
+        animation: bounce-popup 0.5s ease-in;
+        transition: 0.5s ease-in;
+        color: $text-color;
+        min-width: 30%;
+        max-width: 60%;
+        cursor: pointer;
+    }
+
+    // animate popup
+    @keyframes bounce-popup {
+        0% {
+            bottom: 5px;
+        }
+
+        50% {
+            bottom: 30px;
+        }
+
+        100% {
+            bottom: 3px;
+        }
+    }
+
+    // hide popup class
+    .hide-popup {
+        transform: translateY(140%);
+        transition: 0.5s ease-in;
+        opacity: 0;
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    // profile info section
+    #profile-info {
+        // display user mail and name
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        position: relative;
+        left: -35%;
+        border: 1px solid rgb(10, 10, 10, 0.1);
+        box-shadow: 1px 1px 2px rgb(10, 10, 10, 0.3);
+        border-radius: 7px;
+        width: 25%;
+        padding: 20px 0;
+
+        .fa-user {
+            font-size: 35px;
+            color: $primary-color;
+        }
+
+        // user name text
+        .profile-name {
+            font-weight: bold;
+            font-size: large;
+        }
+
+        // profile mail container for  showing user mail
+        .profile-mail {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+            padding: 0 10px;
+            font-size: larger;
+            width: max-content;
+
+            i {
+                margin: 0 10px;
+            }
+        }
+    }
+
+    // profile settings
+    #profile-settings {
+        width: 25%;
+        border: 1px solid rgb(10, 10, 10, 0.1);
+        box-shadow: 1px 1px 2px rgb(10, 10, 10, 0.3);
+        border-radius: 4px;
+        margin: 10px 0;
+        position: relative;
+        left: -35%;
+
+        // modify-pwd section
+        .modify-pwd {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 97%;
+            }
+
+            form input {
+                border: 1px solid rgb(10, 10, 10, 0.3);
+                height: 37px;
+                border-radius: 4px;
+                padding: 0 5px;
+                width: 90%;
+                margin: 5px 0;
+            }
+
+            form input:focus {
+                outline: none;
+            }
+
+            // save pwd button
+            .save-new-pwd {
+                width: 50%;
+                margin: 10px 0;
+                height: 34px;
+                border: none;
+                border-radius: 5px;
+                background-color: $primary-color;
+                color: $text-color;
+            }
+
+            .save-new-pwd:disabled {
+                background-color: lighten($color: $primary-color, $amount: 9%);
+                color: $text-color;
+            }
+        }
+
+        // dark mode section
+        .dark-mode {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            // switch tracker
+            .switch {
+                width: 70px;
+                height: 32px;
+                position: relative;
+                background-color: $primary-color;
+                display: flex;
+                align-items: center;
+                border-radius: 15px;
+                cursor: pointer;
+            }
+
+            // input check box
+            .switch input {
+                display: none;
+            }
+
+            // slider
+            .slider {
+                position: absolute;
+                height: 28px;
+                width: 28px;
+                border-radius: 50px;
+                background-color: $text-color;
+                -webkit-transition: .3s;
+                transition: .3s;
+            }
+
+        }
+    }
+
+    // utility section
+    #utility {
+        width: 100%;
+
+        p {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            i {
+                position: absolute;
+                right: 30%;
+            }
+        }
+    }
+
+    // popup
+    #popup {
+        position: fixed;
+        z-index: 3;
+        right: 10px;
+        bottom: 15px;
+        padding: 15px;
+        animation: bounce-popup 0.5s ease-in;
+        transition: 0.5s ease-in;
+        color: $text-color;
+        min-width: 100px;
+        max-width: 300px;
+        cursor: pointer;
+    }
+
+    // animate popup
+    @keyframes bounce-popup {
+        0% {
+            right: 10px;
+        }
+
+        50% {
+            right: 30px;
+        }
+
+        100% {
+            right: 10px;
+        }
+    }
+
+    // hide popup class
+    .hide-popup {
+        transform: translateX(140%);
+        transition: 0.5s ease-in;
+        opacity: 0;
+        display: none;
+    }
+}
+
+// aside section for displaying utility contnent
+.confirm-box-container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: rgb(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .confirmbox{
+        border: 1px solid rgb(10, 10, 10, 0.1);
+        min-width: 100px;
+        min-height: 200px;
+        box-shadow: 2px 2px 4px rgb(10, 10, 10, 0.1);
+        background-color: white;
+        width: 40%;
+        // container msg
+        .warning-msg{
+            margin: 0 0 25px 0;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 19px;
+            position: relative;
+        }
+        // containe for action button
+        .action-button-container{
+            text-align: center;
+            position: relative;
+            top: 50px;
+            button{
+                margin: 0 20px;
+                width: 120px;
+                height: 30px;
+                border: none;
+            }
+            // action button
+            .confirm-btn{
+                background-color: #3BB472;
+            }
+            .deny-btn{
+                background-color: #EE0709;
+            }
+        }
+    }
+}
+
+.hide-popup-warning{
+    display: none;
+}

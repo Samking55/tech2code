@@ -1,0 +1,370 @@
+/*import font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
+// variable
+@import "colors";
+
+body {
+    margin: 0;
+    padding: 0;
+    transition: 1s;
+    scroll-behavior: smooth;
+}
+
+main {
+    position: relative;
+    top: 0px;
+    padding: 0;
+    display: flex;
+    top: 80px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer {
+    position: relative;
+    top: 21vh;
+    margin: 80px 0 0 0;
+    background-color: rgb(0, 0, 0, 0.05);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer div {
+    margin: 5px 0;
+    padding: 15px 0;
+}
+
+footer div:first-child {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+.copyright {
+    text-align: center;
+}
+
+/* socials section in the footer */
+footer .footer-socials {
+    text-align: center;
+}
+
+footer .footer-socials .footer-socials-title {
+    color: rgb(0, 0, 0, 0.6);
+}
+
+footer .footer-socials i {
+    font-size: 30px;
+    margin: 0 10px;
+    color: rgb(0, 0, 0, 0.6);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+@media (max-width: 900px) {
+
+
+    /* header section */
+    #main-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        position: relative;
+        width: 100%;
+        position: fixed;
+        z-index: 3;
+        background-color: rgb(255, 255, 255);
+    }
+
+    /* header inner contains the differents part for the header */
+    #header-inner {
+        width: 100%;
+        /* set display flex*/
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        position: relative;
+    }
+
+    /* website name section to display the website's name */
+    .site-name {
+        border-right: 1px solid $main_color;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .site-name p {
+        font-size: 20px;
+    }
+
+    /* btn header section will style section for the menu and profile button in the header */
+    .btn-header-section {
+        /* border-left: 1px solid rgb(31, 81, 255, 0.4); */
+        /* padding: 0 10px; */
+        height: 50%;
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-header-section button {
+        height: 90%;
+        width: 50px;
+        margin: 0 10px;
+        font-size: 23px;
+        background-color: transparent;
+        border: none;
+        color: $main_color;
+    }
+
+    /* hide the menu for mobile and tablet version */
+    #main_nav {
+        position: absolute;
+        top: 60px;
+        z-index: 3;
+        width: 100%;
+        left: 0;
+        padding: 0;
+        background-color: rgb(245, 245, 255);
+        overflow: hidden;
+        transition: 0.4s;
+    }
+
+    /* class for toggling the menu for mobile version */
+    .hide-main-nav {
+        height: 0px;
+        transition: 0.4s;
+        opacity: 0;
+    }
+
+    /* section containing every single menu item */
+    .main-menu {
+        list-style-type: none;
+        padding: 0 10px;
+    }
+
+    .menu-item {
+        border: 1px solid $main_color;
+        text-align: center;
+        margin: 10px 0;
+        border-radius: 10px;
+        color: rgb(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* toggle the dropdown menu */
+
+    [data-item-menu="list_course_item"]:hover .dropdown-menu {
+        display: block;
+    }
+
+    [data-item-menu="list_course_item"] i {
+        color: $main_color;
+    }
+
+    /* dropdown menu */
+    .dropdown-menu {
+        border: 1px solid rgb(0, 0, 0, 0.1);
+        list-style-type: none;
+        padding: 0;
+        display: none;
+        width: 95%;
+        background-color: rgb(245, 245, 245);
+        margin: 5px 0;
+        border-radius: 10px;
+    }
+
+    .dropdown-item {
+        text-align: center;
+        padding: 10px 0;
+        margin: 7px 0;
+    }
+
+    /* user section displays short informations about the users */
+    #user-section {
+        position: absolute;
+        overflow: hidden;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        background-color: rgb(245, 245, 245);
+        border: 1px solid rgb(0, 0, 0, 0.1);
+        transition: 0.4s;
+        display: flex;
+        justify-content: center;
+        z-index: 3;
+    }
+
+    /* this section will be rendered if the user is not connected */
+    .profile-login-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profile-login {
+        height: 35px;
+        background-color: $primary-color;
+        color: rgb(245, 245, 245);
+        margin: 10px 0;
+        border: none;
+    }
+
+    /* class for hiding the profile section if the suer is not connected */
+    .hide-user-section {
+        height: 0px;
+        opacity: 0;
+        transition: 0.4s;
+    }
+
+    /* profile info container */
+    .profile-info-container {
+        list-style-type: none;
+        text-align: center;
+    }
+
+    .profile-logout-btn {
+        height: 35px;
+        background-color: $primary-color;
+        color: rgb(245, 245, 245);
+        margin: 10px 0;
+        border: none;
+    }
+
+}
+
+/* desktop version */
+/* main header containing the menu and website's name */
+@media (min-width: 900px) {
+    #main-header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 10px 0;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+    }
+
+    #header-inner {
+        border: 1px solid rgb(0, 0, 0, 0.1);
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 10px;
+        background-color: rgb(253, 253, 253);
+        box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.1);
+    }
+
+    /* website name container */
+    .site-name {
+        border-right: 1px solid;
+        height: max-content;
+        padding: 0 10px;
+
+    }
+
+    .site-name p {
+        margin: 3px 0;
+        font-size: 21px;
+        font-weight: bolder;
+    }
+
+    /* website menu */
+    #main_nav {
+        padding: 0;
+    }
+
+    /* menu item list container */
+    .main-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    /* menu item */
+    .menu-item {
+        width: 140px;
+        position: relative;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+    }
+
+    /* change cursor for hover in desktop mode */
+    .menu-item:hover {
+        cursor: pointer;
+    }
+
+    /* change color for the dropdown menu item icon*/
+    [data-item-menu="list_course_item"] i {
+        color: $main_color;
+    }
+
+    /* dropdown menu */
+    .dropdown-menu {
+        position: absolute;
+        top: 52px;
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+        background-color: rgb(246, 246, 246);
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: 0.4s;
+    }
+
+    /* dropdown itemts */
+    .dropdown-item {
+        padding: 7px 0;
+        margin: 2px 0;
+        transition: 0.4s;
+    }
+
+    .dropdown-item:hover {
+        scale: 0.9;
+        transition: 0.4s;
+    }
+
+    /* hide dropdown menu class */
+    .hide-dropdown {
+        height: 0;
+        visibility: hidden;
+        transition: 0.4s;
+    }
+
+    /* header btn section */
+    .btn-header-section {
+        display: none;
+    }
+
+    /* login and logout btn */
+    #user-section button {
+        border: none;
+        background-color: $main_color;
+        height: 25px;
+        width: 120px;
+        color: rgb(250, 250, 250);
+        border-radius: 10px;
+    }
+}

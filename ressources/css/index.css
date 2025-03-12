@@ -1,105 +1,628 @@
-button:hover{
-    cursor: pointer;
+#index-page-content {
+  top: 0;
 }
 
-#index-content{
+.banner-dark {
+  color: rgb(0, 0, 128);
+}
+
+.banner-light {
+  color: rgb(31, 81, 255);
+}
+
+@media (max-width: 900px) {
+  /*index content for the main section of the page*/
+  #index-content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.course-list-container{
-    width: 97%;
+  }
+  /*banner styling*/
+  #banner-container {
+    position: relative;
+    padding: 0px;
+    margin: 50px 0;
+    height: max-content;
+    width: 95%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-/*cards styling*/
-.course-card{
-    border: 2px solid rgb(176, 174, 174, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    height: 500px;
-    width: 400px;
-    margin: 0 0 30px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .banner {
+    font-family: "Atkinson Hyperlegible Next", serif;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
     position: relative;
-}
-
-.course-card-img{
-    height: 50%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    transition: 0.4s;
-    overflow: hidden;
-}
-
-.course-card-img:hover img{
-    filter: brightness(0.4);
-    transform: scale(1.3);
-    transition: 0.4s;
-}
-
-.course-card-img img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    transition: 0.4s;
-    transform: scale(1.5);
-    position: relative;
-}
-
-.overlay{
+    font-size: 30px;
+    padding: 0px;
+    margin: 70px 0;
+    height: 240px;
+    text-align: left;
+  }
+  .banner-text {
+    font-weight: bold;
+    text-align: left;
+  }
+  .background-bubble-banner {
     position: absolute;
-    z-index: 2;
-    font-weight: bolder;
-    font-size: 40px;
-    display: none;
-    transition: 0.4s;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    filter: brightness(0.9);
-}
-
-.overlay-tag{
-    font-size: 70px;
+    display: block;
+    background-color: rgb(230.7038834951, 235.3762135922, 251.7961165049);
+    border-radius: 30px;
+    z-index: -1;
+    transform: rotate(30deg);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .bubble-1 {
+    animation: animate-bubble 1s infinite alternate-reverse;
+    height: 160px;
+    width: 190px;
+    top: 0%;
+    left: 7%;
+  }
+  .bubble-2 {
+    width: 190px;
+    height: 180px;
+    top: 0;
+    left: -90px;
+  }
+  .bubble-img {
+    position: absolute;
+    transform: rotate(-30deg);
     margin: 0;
     padding: 0;
-}
-
-.course-card-img:hover .overlay{
+  }
+  .b-img-1 {
+    top: -20px;
+    left: -20px;
+  }
+  .b-img-2 {
+    right: -20px;
+    top: -20px;
+  }
+  .b-img-3 {
+    bottom: -10px;
+    left: -10px;
+  }
+  .b-img-4 {
+    bottom: -10px;
+    right: -5px;
+  }
+  @keyframes animate-bubble {
+    from {
+      transform: rotate(25deg);
+    }
+    to {
+      top: 20px;
+      transform: rotate(30deg);
+    }
+  }
+  /*buttons for call to action*/
+  .call-to-action {
+    width: 98%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 0.4s;
-}
-
-.course-card-text{
-    color: rgb(176, 174, 174);
-    font-size: 20px;
-    padding: 5px;
-    text-align: center;
-    height: 80px;
-}
-
-.course-card-actionbtn{
-    position: relative;
-    top: 30px;
-    text-align: center;
-}
-
-.course-card-actionbtn button{
-    width: 150px;
+  }
+  .call-to-action button {
+    border: 1px solid rgba(0, 0, 0, 0.1);
     height: 40px;
-    background-color: transparent;
-    color: white;
-    border: 1px solid;
-    border-radius: 15px;
-
+    margin: 0 10px;
+    font-size: medium;
+    width: 160px;
+    margin: 10px 0;
+  }
+  .register-btn {
+    background-color: rgb(73, 108, 231);
+    color: rgb(241, 241, 241);
+    position: relative;
+    left: -20%;
+  }
+  .login-btn {
+    background-color: rgb(251, 251, 251);
+  }
+  /*banner close*/
+  /*module course presentation logo*/
+  .course-presentation-container-logo {
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 15px 0 0;
+    padding: 0;
+    height: 100%;
+  }
+  /*ajust image size for course module section*/
+  .course-presentation-container-logo img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  .course-module {
+    margin: 10px 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+    height: 40px;
+  }
+  /*course container displaying modules*/
+  .course-presentation-inner {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    width: 90%;
+    box-shadow: 2px 2px 4px rgb(221, 221, 221);
+  }
+  #course-presentation-container {
+    position: relative;
+    padding: 20px 5px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  /*course-module-container-text this indicates the text writen on over the box containing the modules*/
+  .course-module-container-text {
+    position: absolute;
+    top: -20px;
+    left: 10%;
+    z-index: 2;
+    background-color: rgb(73, 108, 231);
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    border-radius: 5px;
+    font-size: 20px;
+    color: rgb(241, 241, 241);
+    font-family: "Roboto", serif;
+  }
+  /*end*/
+  /* render this module list if the user is connected */
+  #module-list {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .module {
+    border: 1px solid rgb(73, 108, 231);
+    width: 30%;
+    text-align: center;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .module::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -30px;
+    width: 30px;
+    height: 1px;
+    background-color: rgb(73, 108, 231);
+  }
+  .module::after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: -30px;
+    width: 30px;
+    height: 1px;
+    background-color: rgb(73, 108, 231);
+  }
+  .m1 {
+    left: -50px;
+    animation: animate-module-bubble 1.5s alternate-reverse infinite;
+  }
+  .m2 {
+    left: -25px;
+    animation: animate-module-bubble 1.9s alternate-reverse infinite;
+  }
+  .m3 {
+    animation: animate-module-bubble 2.4s alternate-reverse infinite;
+  }
+  .m4 {
+    right: -25px;
+    animation: animate-module-bubble 2.9s alternate-reverse infinite;
+  }
+  .m5 {
+    right: -50px;
+    animation: animate-module-bubble 3.3s alternate-reverse infinite;
+  }
+  @keyframes animate-module-bubble {
+    from {
+      right: 5%;
+    }
+    to {
+      right: 0%;
+    }
+  }
+  /* recent course design */
+  #recent-course {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    padding: 10px;
+    margin: 60px 0;
+  }
+  .recent-course-inner {
+    box-shadow: 2px 2px 4px rgb(221, 221, 221);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 20px 3px;
+    font-family: "Atkinson Hyperlegible Next", serif;
+    position: relative;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .recent-course-inner h3 {
+    position: absolute;
+    width: 90%;
+    top: -42px;
+    text-align: center;
+    color: rgb(241, 241, 241);
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 1px;
+    background-color: rgb(86, 90, 105);
+  }
+  .row-inner-recent-course {
+    height: 40px;
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  .row-inner-recent-course span {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  .row-inner-recent-course span img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+  .row-inner-recent-course span:last-child {
+    border: none;
+  }
+  .row-course-chapter {
+    min-width: 120px;
+  }
+  .row-course-date {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
 }
+@media (min-width: 900px) {
+  /*index content for the main section of the page*/
+  #index-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  /*banner styling*/
+  #banner-container {
+    position: relative;
+    padding: 0px;
+    margin: 50px 0;
+    left: -15%;
+    height: max-content;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .banner {
+    font-family: "Atkinson Hyperlegible Next", serif;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    position: relative;
+    font-size: 30px;
+    padding: 0px;
+    margin: 70px 0;
+    height: 240px;
+    text-align: left;
+  }
+  .banner-text {
+    width: 75%;
+    text-align: left;
+    left: -15%;
+    font-size: 50px;
+    font-weight: bolder;
+  }
+  .background-bubble-banner {
+    position: absolute;
+    display: block;
+    background-color: rgb(230.7038834951, 235.3762135922, 251.7961165049);
+    border-radius: 30px;
+    z-index: -1;
+    transform: rotate(30deg);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 220px;
+    height: 200px;
+  }
+  .bubble-1 {
+    animation: animate-bubble 1s infinite alternate-reverse;
+    top: 0%;
+    left: 7%;
+  }
+  .bubble-2 {
+    top: 0;
+    left: 80px;
+  }
+  .bubble-img {
+    position: absolute;
+    transform: rotate(-30deg);
+    margin: 0;
+    padding: 0;
+  }
+  .b-img-1 {
+    top: -20px;
+    left: -20px;
+  }
+  .b-img-2 {
+    right: -20px;
+    top: -20px;
+  }
+  .b-img-3 {
+    bottom: -10px;
+    left: -10px;
+  }
+  .b-img-4 {
+    bottom: -10px;
+    right: -5px;
+  }
+  @keyframes animate-bubble {
+    from {
+      transform: rotate(25deg);
+    }
+    to {
+      top: 20px;
+      transform: rotate(30deg);
+    }
+  }
+  /*buttons for call to actio*/
+  .call-to-action {
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .call-to-action button {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: 40px;
+    margin: 0 10px;
+    font-size: medium;
+    width: 160px;
+  }
+  .register-btn {
+    background-color: rgb(73, 108, 231);
+    color: rgb(241, 241, 241);
+  }
+  .login-btn {
+    background-color: rgb(251, 251, 251);
+  }
+  /*banner close*/
+  /*module course presentation logo*/
+  .course-presentation-container-logo {
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 15px 0 0;
+    padding: 0;
+    height: 100%;
+  }
+  /*ajust image size for course module section*/
+  .course-presentation-container-logo img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  .course-module {
+    margin: 10px 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+    height: 40px;
+  }
+  /*course container displaying modules*/
+  .course-presentation-inner {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px 10px;
+    width: 45%;
+    box-shadow: 2px 2px 4px rgb(221, 221, 221);
+    left: -22%;
+  }
+  #course-presentation-container {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  /*course-module-container-text this indicates the text writen on over the box containing the modules*/
+  .course-module-container-text {
+    position: absolute;
+    top: -20px;
+    left: 10%;
+    z-index: 2;
+    background-color: rgb(73, 108, 231);
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    border-radius: 5px;
+    font-size: 20px;
+    color: rgb(241, 241, 241);
+    font-family: "Roboto", serif;
+  }
+  /*end*/
+  /* render this module list if the user is connected */
+  #module-list {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .module {
+    border: 1px solid rgb(73, 108, 231);
+    width: 30%;
+    text-align: center;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .module::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -30px;
+    width: 30px;
+    height: 1px;
+    background-color: rgb(73, 108, 231);
+  }
+  .module::after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: -30px;
+    width: 30px;
+    height: 1px;
+    background-color: rgb(73, 108, 231);
+  }
+  /* recent course design */
+  #recent-course {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    padding: 10px;
+    margin: 60px 0;
+    right: -20%;
+  }
+  .recent-course-inner {
+    box-shadow: 2px 2px 4px rgb(221, 221, 221);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 20px 3px;
+    font-family: "Atkinson Hyperlegible Next", serif;
+    position: relative;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .recent-course-inner h3 {
+    position: absolute;
+    width: 90%;
+    top: -42px;
+    text-align: center;
+    color: rgb(241, 241, 241);
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 1px;
+    background-color: rgb(86, 90, 105);
+  }
+  .row-inner-recent-course {
+    height: 40px;
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  .row-inner-recent-course span {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  .row-inner-recent-course span img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+  .row-inner-recent-course span:last-child {
+    border: none;
+  }
+  .row-course-chapter {
+    min-width: 120px;
+  }
+  .row-course-date {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+}
+.carousel {
+  width: 100%;
+  min-height: 83vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.carousel .slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 2s;
+  transform: translateX(-30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.6);
+}
+.carousel .slide .slide-tab-text {
+  color: rgb(250, 250, 250);
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+  padding: 5px;
+}
+.carousel .active {
+  opacity: 1;
+  transition: 3s;
+  transform: translateX(0px);
+}
+
+/*# sourceMappingURL=index.css.map */

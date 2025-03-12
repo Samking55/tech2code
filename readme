@@ -1,0 +1,34 @@
+This project has been built with hard work and love. Enjoy using templates, examples from it or suggest any changes
+
+This is a web app meant for learning any kind of subject. 
+
+How is this project built ?
+There are quite several pages, not a single web page application but has lots of functionnalities. The courses are uploaded by teachers who have registered to this plateform. Learners can then, access content only if logged in.
+Learners can choose from different course type. Major upgrades and updates are still planed to be released and keep the project maitained for a long time.
+
+How is that project different from other look alike ones ?
+This project is built different by the fact that it will keep having differents update over the time. Security updates, bug fixes and much more. All the courses added are going to be updated once there will be any changes like in programming course
+
+What is the targetted audience for this plateform ?
+Looking for people looking to have a consistent learning by having a teacher for following them. This project has been built first to give courses online from real teachers not only for programming
+
+What are the features ?
+Teacher dashboard
+Email system for sending updates to users (not yet release for the version one of the website)
+Password reset throught token generation
+Admin dashboard for managing the whole plateform
+Learners space for accessing their personnal informations
+
+Is this plateform secured ?
+we barely can say 100% safe, but the max required level for security and errors handling has been the first target for me while developping this project. To keep secured, people data, give them a safe place where they can learn. This platform uses encryption method and requires a given paswword length to register
+
+Is this project open source ?
+The code is free to use on github. So yes it is
+
+How will this platform will afford paying teachers ?
+From premium subscription and advertisement. We plane to look for serious and hard working teachers for helping this platform grow better
+
+
+People data are secured and not sold. Let you learn either for free or with the premium subscription, we keep your data safe.
+
+
